@@ -6,10 +6,9 @@
 
 {% block content %}
   {% for book in books %}
-      <h1>{{ book.title }}</h1>
-      <h2>{{ book.author}}</h2>
-      <h4>{{ book.description }}</h4>
-      <h6>{{ book.price }}</h6>
+     <a href ="{{  book.get_absolute_url }}" ><h1>{{ book.title }}</h1></a>
+      <p>{{ book.description }}</p>
+
   {% endfor %}
 
 {% endblock %}
