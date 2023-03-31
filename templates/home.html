@@ -4,7 +4,6 @@
  Home page
 {% endblock %}
 
-
 {% block content %}
     <p> home page</p>
     {% if user.is_authenticated %}
@@ -13,6 +12,7 @@
     {% else %}
         <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Sign Up</a>
 
-
     {% endif %}
+    <br>
+    <a href="{% url 'book_list' %}">book list</a>
 {% endblock %}
