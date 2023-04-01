@@ -2,14 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block page_titlle %}
-  New Book
+  Edit {{ book.title }}
 {% endblock %}
 
 {% block content %}
     <form  action="" method="Post">
           {% csrf_token %}
           {{ form| crispy}}
-          <input type="submit" value="create">
+          <input type="submit" value="edit">
     </form>
     <a href="{% url 'book_list' %}"> List Of Books</a>
 {% endblock %}
