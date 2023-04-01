@@ -10,8 +10,9 @@
   <p>{{ book.description }}</p>
   <h6>{{ book.price }}</h6>
     <a href="{% url 'book_update' book.id  %}"><button class="btn btn-info" type="button" >Edit</button></a>
+    <a href="{% url 'book_delete' book.id  %}"><button class="btn btn-danger" type="button" >Delete</button></a>
     <br>
-    <a href="{% url 'book_list' %}"> return</a>
+    <a href="{% url 'book_list' %}"> return to list of book</a>
 
 
 {% endblock %}
