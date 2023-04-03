@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-  <h1>{{ book.title }}</h1>
-  <p>{{ book.author}}</p>
-  <p>{{ book.description }}</p>
+  <h1>{{ book.title|capfirst}}</h1>
+  <p>{{ book.author|capfirst}}</p>
+  <p>{{ book.description|capfirst|linebreaks}}</p>
   <h6>{{ book.price }}</h6>
     <a href="{% url 'book_update' book.id  %}"><button class="btn btn-info" type="button" >Edit</button></a>
     <a href="{% url 'book_delete' book.id  %}"><button class="btn btn-danger" type="button" >Delete</button></a>
